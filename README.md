@@ -36,4 +36,4 @@ Admins can approve articles and manage categories and messages via the Django ad
 
 ### 📸 Demo Screenshot   
 
-![Article Hub Screenshot](article_hub/static/screenshots/article_hub_demo.png)
+![Article Hub Screenshot](static/screenshots/article_hub_demo.png)
