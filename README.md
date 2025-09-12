@@ -5,7 +5,7 @@
 </p>
 
 # 📚 Article Hub  
-**Django MySQL Bootstrap**  
+**Django PostgreSQL Bootstrap**  
 
 A Django-based web application that allows users to create, manage, and read articles.  
 Users can register, log in, manage their articles, and send messages to the admin through a contact form.  
