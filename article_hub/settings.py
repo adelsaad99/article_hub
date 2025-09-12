@@ -6,7 +6,7 @@ import secrets
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config('SECRET_KEY')
-print(secrets.token_urlsafe(50))
+
 
 
 DEBUG = True
