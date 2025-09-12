@@ -1,10 +1,13 @@
 from pathlib import Path
 import os
 from decouple import config
+import secrets
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config('SECRET_KEY')
+print(secrets.token_urlsafe(50))
+
 
 DEBUG = True
 
