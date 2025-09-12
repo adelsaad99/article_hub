@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4 text-center">Delete Article</h1>
+
+    <!-- Confirmation message -->
+    <p class="text-center">Are you sure you want to delete "<strong>{{ article.title }}</strong>"?</p>
+
+    <!-- Delete form -->
+    <form method="post" class="d-flex justify-content-center gap-3 mt-4">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger px-4">Yes, Delete</button>
+        <a href="{% url 'profile' %}" class="btn btn-secondary px-4">Cancel</a>
+    </form>
+</div>
+{% endblock %}

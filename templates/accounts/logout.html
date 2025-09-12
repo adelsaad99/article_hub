@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Centered logout card -->
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card mt-5">
+      <div class="card-body text-center">
+        
+        <!-- Card title and message -->
+        <h2 class="card-title">Logout</h2>
+        <p class="card-text">Are you sure you want to logout?</p>
+
+        <!-- Logout form -->
+        <form method="post" action="{% url 'logout' %}">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-danger">Yes, Logout</button>
+          <a href="{% url 'home' %}" class="btn btn-secondary">Cancel</a>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

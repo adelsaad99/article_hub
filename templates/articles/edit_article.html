@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4 text-center">Edit Article</h1>
+
+    <!-- Form for editing the article -->
+    <form method="post" enctype="multipart/form-data" class="p-4 border rounded shadow-sm bg-light">
+        {% csrf_token %}
+
+        <!-- Title field -->
+        <div class="form-group mb-3">
+            {{ form.title.label_tag }}
+            {{ form.title }}
+        </div>
+
+        <!-- Content field -->
+        <div class="form-group mb-3">
+            {{ form.content.label_tag }}
+            {{ form.content }}
+        </div>
+
+        <!-- Category field -->
+        <div class="form-group mb-3">
+            {{ form.category.label_tag }}
+            {{ form.category }}
+        </div>
+
+        <!-- Image field -->
+        <div class="form-group mb-4">
+            {{ form.image.label_tag }}
+            {{ form.image }}
+        </div>
+
+        <!-- Buttons -->
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-success px-4">Update</button>
+            <a href="{% url 'profile' %}" class="btn btn-outline-secondary px-4">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

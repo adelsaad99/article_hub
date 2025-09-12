@@ -1,0 +1,16 @@
+.article-card .card-img-container {
+    height: 200px;
+    overflow: hidden;
+}
+
+.article-card .card-img-top {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover .card-img-top {
+    transform: scale(1.05);
+}

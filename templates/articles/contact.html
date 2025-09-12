@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+          <h2 class="mb-0">Contact Us</h2>
+        </div>
+        <div class="card-body">
+
+          <p class="card-text">Have questions or feedback? Send us a message and we'll get back to you as soon as possible.</p>
+
+          <!-- Contact form -->
+          <form method="post">
+            {% csrf_token %}
+
+            <div class="form-group mb-3">
+              <label for="id_full_name">Full Name *</label>
+              {{ form.full_name }}
+              {% if form.full_name.errors %}
+                <div class="text-danger">
+                  {% for error in form.full_name.errors %}
+                    {{ error }}
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="id_email">Email Address *</label>
+              {{ form.email }}
+              {% if form.email.errors %}
+                <div class="text-danger">
+                  {% for error in form.email.errors %}
+                    {{ error }}
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+
+            <div class="form-group mb-4">
+              <label for="id_message">Message *</label>
+              {{ form.message }}
+              {% if form.message.errors %}
+                <div class="text-danger">
+                  {% for error in form.message.errors %}
+                    {{ error }}
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+
+            <div class="d-flex justify-content-between">
+              <button type="submit" class="btn btn-primary px-4">Send Message</button>
+              <a href="{% url 'home' %}" class="btn btn-secondary px-4">Cancel</a>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

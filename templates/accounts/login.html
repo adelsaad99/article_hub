@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Login</h1>
+
+<!-- Login form -->
+<form method="post">
+  {% csrf_token %}
+
+  <!-- Username field -->
+  <div class="form-group">
+    {{ form.username.label_tag }}
+    {{ form.username }}
+  </div>
+
+  <!-- Password field -->
+  <div class="form-group">
+    {{ form.password.label_tag }}
+    {{ form.password }}
+  </div>
+
+  <!-- Show error if login fails -->
+  {% if form.errors %}
+    <div class="alert alert-danger">
+      Invalid username or password.
+    </div>
+  {% endif %}
+
+  <!-- Submit button -->
+  <button type="submit" class="btn btn-primary">Login</button>
+
+  <!-- Link to registration page -->
+  <p class="mt-3">
+    Don't have an account? <a href="{% url 'register' %}">Register here</a>
+  </p>
+</form>
+{% endblock %}

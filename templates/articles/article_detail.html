@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Article card -->
+<div class="card mb-4">
+  <!-- Show image if article has one -->
+  {% if article.image %}
+    <img src="{{ article.image.url }}" 
+         class="card-img-top img-fluid" 
+         alt="{{ article.title }}" 
+         style="max-height: 400px; object-fit: cover; width: 50%;">
+  {% endif %}
+
+  <!-- Article content -->
+  <div class="card-body">
+    <h1 class="card-title">{{ article.title }}</h1>
+    <p class="card-text">{{ article.content }}</p>
+  </div>
+
+  <!-- Article metadata -->
+  <div class="card-footer text-muted">
+    Posted on {{ article.created_at|date:"M d, Y" }} by {{ article.author.username }}
+    {% if article.category %}
+      | Category: {{ article.category.name }}
+    {% endif %}
+  </div>
+</div>
+
+<!-- Back button -->
+<a href="{% url 'home' %}" class="btn btn-secondary mt-3">Back to Home</a>
+{% endblock %}
