@@ -12,7 +12,12 @@ Users can register, log in, manage their articles, and send messages to the admi
 Admins can approve articles and manage categories and messages via the Django admin panel.  
 
 ---
+## 🌐 Live Demo
 
+Check out the Article Hub live application here:  
+👉 https://article-hub-1-e23v.onrender.com
+
+---
 ### ⚡ Features  
 - 🔑 **User Authentication**: Register, login, logout, and profile management.  
 - 📝 **Article Management**: Users can create, edit, and delete their articles.  
