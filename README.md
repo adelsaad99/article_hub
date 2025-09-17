@@ -14,8 +14,10 @@ Admins can approve articles and manage categories and messages via the Django ad
 ---
 ## 🌐 Live Demo
 
-Check out the Article Hub live application here:  
-👉 https://article-hub-1-e23v.onrender.com
+Check out the live applications here:
+
+- **Article Hub**: 👉 [https://article-hub-1-e23v.onrender.com/](https://article-hub-1-e23v.onrender.com/)
+- Feel free to explore the features and interact with the applications. 
 
 ---
 ### ⚡ Features  
